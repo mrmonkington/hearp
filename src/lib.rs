@@ -17,8 +17,8 @@ pub struct Hearp<T: Clone, F: Fn(&T, &T) -> bool> {
 }
 
 impl<T: Clone, F: Fn(&T, &T) -> bool> Hearp<T, F> {
-    pub fn new(comparison_func: F) -> Hearp<T, F> {
-        Hearp {
+    pub fn new(comparison_func: F) -> Self {
+        Self {
             items: Vec::new(),
             comparison_func
         }
